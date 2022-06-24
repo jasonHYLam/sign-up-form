@@ -9,22 +9,14 @@ body {
 .container {
     display: flex;
 }
-p {
-    color: red;
-}
-
 .side-image-container {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex: 1; */
-    /* flex-grow: ; */
-    /* flex-basis: 70%; */
-    background-color: green;
+    display: flex;
+    flex-direction: column;
     width: 30%;
-    /* max-height: 100%; */
     background-image: url("roan-lavery-lvy_VvdLmnA-unsplash.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
+    align-items: center;
 }
 
 .side-image {
@@ -34,9 +26,28 @@ p {
     /* max-width: 100%; */
 }
 
+.logo-container {
+    height: 100px;
+    margin-top: 180px;
+    background-color: rgba(33, 29, 29, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.logo-text {
+    font-size: 50px;
+    color: white;
+    
+}
+
+.logo-image {
+    height: 100%
+}
+
 .sign-up-container {
-    padding-left: 20px;
-    background-color:rebeccapurple;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,8 +55,14 @@ p {
 }
 
 .sign-up-header {
-    background-color: wheat;
     padding-top: 10%;
+    padding-right: 200px;
+    background-color: #F9FAFB;
+}
+
+.sign-up-header p {
+    font-weight: 700;
+    font-size: 20px;
 }
 input, label {
     display:block;
@@ -54,9 +71,14 @@ input, label {
 .form-container {
     display: flex;
     width: 500px;
-    background-color: aqua;
     flex-wrap: wrap;
     gap: 30px 70px;
+}
+
+.sign-up-body,
+.sign-up-header,
+.sign-up-footer {
+    padding-left: 50px;
 }
 
 .login-container {
@@ -77,12 +99,29 @@ button {
 }
 
 .sign-up-footer {
-    background-color: blanchedalmond;
     padding-bottom: 10%;
     padding-top: 30px;
+    background-color: #F9FAFB;
 }
 
 .sign-up-body {
     padding-top: 10px;
     padding-bottom: 40px;
+    background-color: #FFFFFF;
+}
+
+.image-footer {
+    margin-top: auto;
+}
+.image-footer p {
+    color: white;
+}
+
+.image-footer a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.sign-up-body p {
+    font-size: 30px;
 }
