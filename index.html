@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="password.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
@@ -32,48 +38,50 @@
         
             <div class="sign-up-header">
                 <div class="header-text">
-                    <p>This is not real; wake up! Open your third eye!</p>
                     <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams.</p>
-                    <p>Sign up <em>now</em> to get started.</p>
+                    <p>Sign up <em>now </em> &nbsp; to get started.</p>
                     <br>
-                    <p>You <em>know</em> you want to.</p>
+                    <p>You <em>know</em> &nbsp; you want to.</p>
                 </div>
             </div>
 
             <div class="sign-up-body">
                 <p>Ikuzo!</p>
-                <form action="post">
+                <form action="post" id="sign-up-form">
 
-                    <div class="form-container">
+                    <div class="form-container" >
 
                         <div class="form-label-input">
                             <label for="first-name">FIRST NAME</label>
-                            <input id="first-name" type="text">
+                            <input placeholder=" " id="first-name" type="text" required>
                         </div>
 
                         <div class="form-label-input">
-                            <label for="">LAST NAME</label>
-                            <input type="text">
+                            <label for="last-name">LAST NAME</label>
+                            <input placeholder=" " id="last-name" type="text" required>
                         </div>
 
                         <div class="form-label-input">
-                            <label for="">EMAIL</label>
-                            <input type="text">
+                            <label for="email">EMAIL</label>
+                            <input placeholder=" " id="email" type="email" required>
                         </div>
                     
                         <div class="form-label-input">
-                            <label for="">PHONE NUMBER</label>
-                            <input type="text">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input placeholder=" " id="phone-number" type="tel" required>
                         </div>
 
                         <div class="form-label-input">
-                            <label for="">PASSWORD</label>
-                            <input type="text">
+                            <label  for="password">PASSWORD</label>
+                            <input placeholder=" " onchange="displayErrorMessage()" class="password" id="password" type="password" required>
+                            <span class="requirements"></span>
+
                         </div>
 
                         <div class="form-label-input">
-                            <label for="">CONFIRM PASSWORD</label>
-                            <input type="text">
+                            <label  for="confirm-password">CONFIRM PASSWORD</label>
+                            <input placeholder=" " onchange="displayErrorMessage()" class="confirm-password" id="confirm-password" type="password" required>
+                            <span class="requirements"></span>
                         </div>
                 
                 
@@ -85,7 +93,7 @@
 
             <div class="sign-up-footer">
                 <div class="create-account-sign-in-container">
-                    <button class="create-account-button">Create Account</button>
+                    <button form="sign-up-form" type="submit" class="create-account-button">Create Account</button>
                     <div class="login-container">
                         <p>Already have an account?
                         <a class="login-link" href="">Log in</a>
